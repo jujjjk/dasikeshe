@@ -1,0 +1,38 @@
+server:
+  port: 81
+
+spring:
+  main:
+    banner-mode: off
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zb_db
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+#mybatis:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+lesson: "SpringBoot"
+
+enterprise:
+  name: freext
+  age: 22
+  tel: 15951967577
+  subject:
+    - Java编程
+    - 大数据分析
+    - 智能推荐系统
+
+baseDir: D:\Dtools
+
+center:
+  dataDir: ${baseDir}\data
+  tmpDir: ${baseDir}\tmp
+  logDir: ${baseDir}\log
+  msgDir: ${baseDir}\msg

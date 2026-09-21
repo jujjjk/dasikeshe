@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 仅供 wsh_85230132 项目构建使用的镜像配置（不影响全局 Maven 配置）：
+     mvn -s mirror-settings.xml 时生效；在 IDEA 的 Maven -> User settings file 指向本文件同样生效 -->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
+
+  <!-- 本地仓库：保持默认用户目录，避免换位置 -->
+  <localRepository>${user.home}/.m2/repository</localRepository>
+
+  <mirrors>
+    <!-- 阿里云公共仓库镜像，国内下载依赖快 -->
+    <mirror>
+      <id>aliyunmaven</id>
+      <mirrorOf>*</mirrorOf>
+      <name>aliyun maven mirror</name>
+      <url>https://maven.aliyun.com/repository/public</url>
+    </mirror>
+  </mirrors>
+
+</settings>
